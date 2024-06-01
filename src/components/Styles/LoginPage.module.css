@@ -1,0 +1,160 @@
+.loginContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.formContainer {
+    width: 32%;
+    background-color: transparent;
+    padding: 10px 15px;
+    padding-bottom: 25px;
+    border:1px solid rgba(233, 231, 231, 0.897);
+    border-radius:6px;
+    box-shadow: 0px 0px 1px 0px rgba(240,235,240,1);
+
+}
+
+.formContainer form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.loginHeading {
+    text-align: center;
+padding-top: 8px;
+padding-bottom: 22px;
+    font-size: 20px;
+    font-weight:500;
+    word-spacing: 1px;
+}
+
+.logo{
+    background-color: #0763f8;
+    font-weight: 700;
+    height: 30px;
+    width: 35px;
+    padding: 4px 15px;
+    color:#fff;
+    font-style: italic;
+    font-size: 22px;
+    border-radius:5px;
+}
+
+.inputField {
+    margin-bottom: 15px;
+    padding: 9px 10px;
+    font-size: 14px;
+    border: 0.5px solid rgba(230, 228, 228, 0.918);
+    border-radius:3px;
+    background-color:transparent;
+}
+
+.inputField::placeholder {
+    color: #999;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.inputField:focus {
+     border: 0.5px solid #4285F4; 
+     outline: none;
+}
+
+
+.forgotPassword {
+    text-align: right;
+    font-size: 13px;
+    cursor: pointer;
+    color:#4285F4;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+
+
+
+.loginButton {
+    width: 100%;
+    background-color: #4285F4;
+    border-radius:3px;
+    margin: 10px 0;
+    padding: 8px;
+    color: #fff;
+}
+
+.loginButton:hover {
+    background-color: #0763f8;
+    transition: 400ms ease-in-out;
+}
+
+
+.signupPrompt {
+    font-size:13px;
+    text-align: center;
+    margin-top: 3px;
+    letter-spacing: 0.3px;
+}
+
+.signupLink {
+    color:#4285F4;
+}
+
+
+
+
+@media (max-width:1200px) {
+    .formContainer {
+        width: 35%;
+    }
+}
+
+
+@media (max-width:1000px) {
+    .formContainer {
+        width: 42%;
+    }
+}
+
+
+
+@media (max-width:900px) {
+    .formContainer {
+        width: 50%;
+    }
+}
+
+
+@media (max-width:750px) {
+    .formContainer {
+        width: 60%;
+    }
+}
+
+@media (max-width:600px) {
+    .formContainer {
+        width: 70%;
+    }
+}
+
+@media (max-width:500px) {
+    .formContainer {
+        width: 85%;
+    }
+}
+
+
+
+
+
+@media (max-width:450px) {
+    .formContainer {
+        width: 95%;
+    }
+}
+

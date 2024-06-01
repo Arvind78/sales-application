@@ -1,0 +1,51 @@
+/* 🎨 Importing Google Fonts and Setting Up Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* 🌙 Dark Theme Styles */
+[theme-data="dark"] {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* ☀️ Light Theme Styles */
+[theme-data="light"] {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+th {
+  height: 60px;
+  font-size: 28px;
+}
+
+td {
+  height: 45px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ✨ Smooth Transition for Table Row Hover */
+tr:hover {
+  background-color: #f0f0f0;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

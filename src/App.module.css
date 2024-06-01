@@ -1,0 +1,7 @@
+.themeBtn{
+    position: fixed;
+    right:6px;
+    bottom:80px;
+    z-index:98;
+}
+
