@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import validateLogin from '../../utils/loginValidation';
-import styles from '../styles/LoginPage.module.css';
+import styles from '../Styles/LoginPage.module.css';
 import { ToastContainer, toast } from 'react-toastify';
 import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../hook/useAuth';
