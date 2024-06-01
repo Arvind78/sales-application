@@ -15,6 +15,8 @@ import useAuth from '../../hook/useAuth';
  */
 
 const LoginPage = () => {
+  const { user, setAuth, updateAuth } = useAuth();
+  const Navigate = useNavigate();
   const [loginData, setLoginData] = useState({
     email: '',
     password: '',
@@ -28,19 +30,22 @@ const LoginPage = () => {
   };
 
   const handleSubmit = (e) => {
-    const login = JSON.parse(localStorage.getItem('userAuth'));
+    setAuth();
     e.preventDefault();
     if (!validateLogin(loginData)) {
       return false;
     }
     if (
-      loginData.email === login.email &&
-      loginData.password == login.password
+      loginData.email === user.email &&
+      loginData.password == user.password
     ) {
       toast.success('User login sucessfully !', { theme: 'colored' });
+      updateAuth();
       Navigate('/');
     } else {
-      toast.error('User field !', { theme: 'colored' });
+      toast.error('Invalid username or password!', {
+        theme: 'colored',
+      });
     }
   };
 

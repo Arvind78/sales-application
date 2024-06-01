@@ -1,5 +1,15 @@
 import React, { useState } from 'react';
-import { Table, TableContainer, Tbody, Td, Th, Thead, Tr, Box, Avatar } from '@chakra-ui/react';
+import {
+  Table,
+  TableContainer,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+  Box,
+  Avatar,
+} from '@chakra-ui/react';
 import { HiDotsHorizontal } from 'react-icons/hi';
 import ResponsivePagination from 'react-responsive-pagination';
 import 'react-responsive-pagination/themes/classic.css';
@@ -7,11 +17,11 @@ import ViewOrderModal from './ViewOrderModal';
 
 /**
  * 📦 CompleteOrders Component
- * 
- * This component displays a table of completed orders with pagination. Users can view 
- * order details, including the order ID, customer name with avatar, price, and last 
+ *
+ * This component displays a table of completed orders with pagination. Users can view
+ * order details, including the order ID, customer name with avatar, price, and last
  * modified date. Pagination allows navigation through multiple pages of orders.
- * 
+ *
  * 📝 Features:
  * - Display orders in a table format
  * - Show customer avatars alongside names
@@ -21,8 +31,18 @@ import ViewOrderModal from './ViewOrderModal';
 
 const CompleteOrders = () => {
   const orders = [
-    { id: 'ORD001', customerName: 'John Doe', price: 2500, lastModified: '12/09/2022' },
-    { id: 'ORD002', customerName: 'Jane Smith', price: 1500, lastModified: '15/09/2022' },
+    {
+      id: 'ORD001',
+      customerName: 'John Doe',
+      price: 2500,
+      lastModified: '12/09/2022',
+    },
+    {
+      id: 'ORD002',
+      customerName: 'Jane Smith',
+      price: 1500,
+      lastModified: '15/09/2022',
+    },
     // Add more orders as needed
   ];
 
@@ -36,7 +56,11 @@ const CompleteOrders = () => {
   return (
     <Box>
       <TableContainer style={{ height: '400px' }}>
-        <Table border="2px solid" borderColor="gray.200" borderRadius="5px">
+        <Table
+          border="2px solid"
+          borderColor="gray.200"
+          borderRadius="5px"
+        >
           <Thead>
             <Tr>
               <Th>ID</Th>
@@ -48,7 +72,10 @@ const CompleteOrders = () => {
           </Thead>
           <Tbody>
             {currentOrders.map((order) => (
-              <Tr key={order.id} _hover={{ bg: 'gray.100', color: "#333" }}>
+              <Tr
+                key={order.id}
+                _hover={{ bg: 'gray.100', color: '#333' }}
+              >
                 <Td>{order.id}</Td>
                 <Td>
                   <div className="avatar">
@@ -59,7 +86,7 @@ const CompleteOrders = () => {
                 <Td isNumeric>{order.price}</Td>
                 <Td>{order.lastModified}</Td>
                 <Td>
-                  <ViewOrderModal/>
+                  <ViewOrderModal />
                 </Td>
               </Tr>
             ))}

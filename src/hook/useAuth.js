@@ -28,12 +28,7 @@ const useAuth = () => {
     return localStorage.setItem('auth', JSON.stringify(newAuth));
   };
 
-  const logout = () => {
-    localStorage.removeItem('auth');
-    return setUser(null);
-  };
-
-  return { user, setAuth, updateAuth, logout };
+  return { user, setAuth, updateAuth };
 };
 
 export default useAuth;

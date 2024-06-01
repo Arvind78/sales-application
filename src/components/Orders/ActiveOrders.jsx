@@ -1,20 +1,71 @@
 import React, { useState } from 'react';
-import { Table, TableContainer, Tbody, Td, Th, Thead, Tr, Box, Avatar } from '@chakra-ui/react';
+import {
+  Table,
+  TableContainer,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+  Box,
+  Avatar,
+} from '@chakra-ui/react';
 import { HiDotsHorizontal } from 'react-icons/hi';
 import ResponsivePagination from 'react-responsive-pagination';
 import 'react-responsive-pagination/themes/classic.css';
+import EditOrderModal from './EditOrderModal';
 
 const ActiveOrders = () => {
   const orders = [
-    { id: 'ORD001', customerName: 'John Doe', price: 2500, lastModified: '12/09/2022' },
-    { id: 'ORD002', customerName: 'Jane Smith', price: 1500, lastModified: '15/09/2022' },
-    { id: 'ORD003', customerName: 'Michael Brown', price: 3000, lastModified: '20/09/2022' },
+    {
+      id: 'ORD001',
+      customerName: 'John Doe',
+      price: 2500,
+      lastModified: '12/09/2022',
+    },
+    {
+      id: 'ORD002',
+      customerName: 'Jane Smith',
+      price: 1500,
+      lastModified: '15/09/2022',
+    },
+    {
+      id: 'ORD003',
+      customerName: 'Michael Brown',
+      price: 3000,
+      lastModified: '20/09/2022',
+    },
     // Add more orders for testing pagination
-    { id: 'ORD004', customerName: 'Alice Johnson', price: 2200, lastModified: '22/09/2022' },
-    { id: 'ORD005', customerName: 'Robert White', price: 2700, lastModified: '25/09/2022' },
-    { id: 'ORD006', customerName: 'Chris Green', price: 1800, lastModified: '27/09/2022' },
-    { id: 'ORD007', customerName: 'Patricia Brown', price: 2600, lastModified: '29/09/2022' },
-    { id: 'ORD008', customerName: 'Linda Blue', price: 2300, lastModified: '30/09/2022' },
+    {
+      id: 'ORD004',
+      customerName: 'Alice Johnson',
+      price: 2200,
+      lastModified: '22/09/2022',
+    },
+    {
+      id: 'ORD005',
+      customerName: 'Robert White',
+      price: 2700,
+      lastModified: '25/09/2022',
+    },
+    {
+      id: 'ORD006',
+      customerName: 'Chris Green',
+      price: 1800,
+      lastModified: '27/09/2022',
+    },
+    {
+      id: 'ORD007',
+      customerName: 'Patricia Brown',
+      price: 2600,
+      lastModified: '29/09/2022',
+    },
+    {
+      id: 'ORD008',
+      customerName: 'Linda Blue',
+      price: 2300,
+      lastModified: '30/09/2022',
+    },
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -27,9 +78,13 @@ const ActiveOrders = () => {
   return (
     <Box>
       <TableContainer style={{ height: '400px' }}>
-        <Table border="2px solid"  borderColor="gray.200" borderRadius="5px">
+        <Table
+          border="2px solid"
+          borderColor="gray.200"
+          borderRadius="5px"
+        >
           <Thead>
-            <Tr >
+            <Tr>
               <Th>ID</Th>
               <Th>Customer Name</Th>
               <Th isNumeric>Price (₹)</Th>
@@ -39,19 +94,21 @@ const ActiveOrders = () => {
           </Thead>
           <Tbody>
             {currentOrders.map((order) => (
-              <Tr key={order.id} _hover={{ bg: 'gray.100',color:"#333"}} >
+              <Tr
+                key={order.id}
+                _hover={{ bg: 'gray.100', color: '#333' }}
+              >
                 <Td>{order.id}</Td>
-                <Td >
+                <Td>
                   <div className="avatar">
-                  <Avatar name={order.customerName} size="sm" />
-                  {order.customerName}
+                    <Avatar name={order.customerName} size="sm" />
+                    {order.customerName}
                   </div>
-               
                 </Td>
                 <Td isNumeric>{order.price}</Td>
                 <Td>{order.lastModified}</Td>
                 <Td>
-                  <HiDotsHorizontal />
+                  <EditOrderModal />
                 </Td>
               </Tr>
             ))}
@@ -59,7 +116,11 @@ const ActiveOrders = () => {
         </Table>
       </TableContainer>
       <Box display="flex" justifyContent="center" mt="4">
-        <ResponsivePagination current={currentPage} total={totalPages} onPageChange={setCurrentPage} />
+        <ResponsivePagination
+          current={currentPage}
+          total={totalPages}
+          onPageChange={setCurrentPage}
+        />
       </Box>
     </Box>
   );

@@ -1,0 +1,48 @@
+/* 🌀 Loading Spinner Styles
+ *
+ * This stylesheet contains styles for displaying a loading spinner.
+ * It includes a full-screen overlay with a centered spinner animation.
+ * 
+ * - .SpinnerContainer: Full-screen container to center the spinner
+ * - .spinner: The spinner itself with animation
+ */
+
+/* 🌐 Container for the spinner, ensuring it is centered on the screen */
+.SpinnerContainer {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+/* 🔄 Spinner animation styling */
+.spinner {
+    width: 35px;
+    height: 35px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    -webkit-animation: spinner 1.2s linear infinite;
+            animation: spinner 1.2s linear infinite;
+}
+
+/* 🌀 Keyframes for spinner rotation */
+@-webkit-keyframes spinner {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes spinner {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
