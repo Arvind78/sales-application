@@ -9,37 +9,6 @@ This is a sales management application built using React.js for a consumer goods
 4. **Sale Order Creation**: A button to create a new sale order, which triggers a modal with a form to enter the sale order details.
 5. **Edit Sale Order**: An option to edit existing active sale orders using a modal with pre-filled details. For completed sale orders, the form is read-only.
 
-## Project Structure
-sales-management-app/
-├── public/
-│ ├── index.html
-│ └── ...
-├── src/
-│ ├── components/
-│ │ ├── Auth/
-│ │ │ └── LoginPage.jsx
-│ │ ├── Orders/
-│ │ │ ├── ActiveOrders.jsx
-│ │ │ ├── CompletedOrders.jsx
-│ │ │ ├── OrderForm.jsx
-│ │ │ └── OrderModal.jsx
-│ │ ├── Theme/
-│ │ │ └── ThemeToggle.jsx
-│ │ └── ...
-│ ├── contexts/
-│ │  └── ThemeContext.jsx
-│ ├── pages/
-│ │ ├── HomePage.jsx
-│ │ ├── NotFoundPage.jsx
-│ │ └── ...
-│ ├── styles/
-│ │ └── ...
-│ ├── App.jsx
-│ ├── index.js
-│ └── router.js
-├── .gitignore
-├── package.json
-└── README.md
 
 ## Installation and Setup
 1. **Clone the Repository**:
