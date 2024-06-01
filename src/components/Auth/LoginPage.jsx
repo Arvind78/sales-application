@@ -17,6 +17,7 @@ import useAuth from '../../hook/useAuth';
 const LoginPage = () => {
   const { user, setAuth, updateAuth } = useAuth();
   const Navigate = useNavigate();
+  const setAuthUser =  setAuth();
   const [loginData, setLoginData] = useState({
     email: '',
     password: '',
@@ -30,14 +31,16 @@ const LoginPage = () => {
   };
 
   const handleSubmit = (e) => {
-    setAuth();
+  
+    console.log(user==loginData);
+
     e.preventDefault();
     if (!validateLogin(loginData)) {
       return false;
     }
     if (
       loginData.email === user.email &&
-      loginData.password == user.password
+      loginData.password === user.password
     ) {
       toast.success('User login sucessfully !', { theme: 'colored' });
       updateAuth();
