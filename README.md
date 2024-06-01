@@ -13,8 +13,8 @@ This is a sales management application built using React.js for a consumer goods
 ## Installation and Setup
 1. **Clone the Repository**:
     ```sh
-    git clone https://github.com/your-username/sales-management-app.git
-    cd sales-management-app
+   git clone https://github.com/Arvind78/sales-application.git
+    cd sales-application
     ```
 
 2. **Install Dependencies**:
